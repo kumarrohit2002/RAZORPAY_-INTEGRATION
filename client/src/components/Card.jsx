@@ -1,0 +1,28 @@
+
+const Card = ({checkoutHandler}) => {
+    return (
+        <div className="p-4 md:w-1/3">
+            <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img className="lg:h-48 md:h-36 cover  object-cover object-center" 
+                src="data:image/png;base64,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" alt="blog" />
+                <div className="p-6">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
+                    <p className="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha 
+                        leggings jianbing microdosing tousled waistcoat.
+                    </p>
+                    <div className="flex items-center justify-between flex-wrap ">
+                        <p className="text-pink-800 font-bold">12$</p>
+                        <button onClick={()=>checkoutHandler({name:"tshirt",amount:12})} 
+                        className="text-indigo-500 inline-flex items-center md:mb-2 bg-blue-800 text-white py-1 px-2 lg:mb-0 rounded-md">
+                            Buy now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )
+}
+
+export default Card
